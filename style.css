@@ -56,7 +56,7 @@ header {
 .button.ghost { background: transparent; border: 1px solid rgba(255,255,255,.22); color: #e9eef6; }
 .button.ghost:hover { background: rgba(255,255,255,.06); color: #fff; }
 .hero-art { position: relative; min-height: 580px; }
-.phone { width: 270px; border-radius: 34px; overflow: hidden; border: 1px solid rgba(255,255,255,.15); box-shadow: 0 30px 80px rgba(0,0,0,.45); position: absolute; }
+.phone { width: 270px; border-radius: 36px; overflow: hidden; border: 5px solid #040a12; box-shadow: 0 30px 80px rgba(0,0,0,.5); position: absolute; background: #040a12; }
 .phone img { display: block; width: 100%; }
 .phone.one { top: 0; right: 48px; transform: rotate(2deg); z-index: 2; }
 .phone.two { top: 82px; right: 258px; transform: rotate(-5deg) scale(.9); opacity: .96; z-index: 1; }
@@ -129,4 +129,21 @@ details p { margin: 12px 0 0; font-size: 14px; }
   .legal .contact { background: #0d1724; }
   .plan { background: #0d1724; }
   .showcase img { border-color: #263345; }
+}
+
+@media (max-width: 700px) {
+  .nav { min-height: 60px; gap: 10px; }
+  .nav-links { gap: 14px; }
+  .nav-links a:nth-child(1), .nav-links a:nth-child(2) { display: none; }
+  .hero { padding-top: 38px; }
+  .hero h1 { font-size: clamp(42px, 12vw, 58px); }
+  .hero-art { min-height: 460px; }
+  .phone { width: 220px; border-radius: 30px; }
+  .phone.one { right: 0; }
+  .phone.two { width: 200px; right: 42%; top: 48px; }
+  .hero-note { flex-direction: column; gap: 4px; }
+  section { padding: 58px 0; }
+  .legal { padding-top: 38px; }
+  .wrap, .narrow { width: min(100% - 32px, 1120px); }
+  footer .footer-grid { flex-direction: column; }
 }
